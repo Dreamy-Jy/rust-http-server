@@ -16,7 +16,6 @@ use telemetry::{init_telemetry, shutdown_telemetry};
 fn main() {
     let (log_provider, metrics_provider, tracer_provider) = init_telemetry();
     setup_sig_handler();
-
     /*
     TODO Start:
     test?? - only file gathering and integration test
@@ -27,6 +26,7 @@ fn main() {
     - put the path of static files in the logs
     - reorg init module into serve module
     - remove hardcoding from routering function
+    - ignore the syscall interrupted signals when flag is set
     */
     let mut server = {
         let sock_addr = SockaddrIn::from(SocketAddrV4::new(Ipv4Addr::LOCALHOST, 8080));

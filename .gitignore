@@ -29,6 +29,7 @@ dist-ssr
 
 /target
 server/target
+.obsidian
 
 # user added
 client_build
